@@ -2,20 +2,20 @@
 ## Docs: https://hexo.io/docs/configuration.html
 ## Source: https://github.com/hexojs/hexo/
 
-# Site
-title: Hexo
-subtitle: ''
-description: ''
-keywords:
-author: John Doe
-language: en
-timezone: ''
+# 网站设置
+title: Smile #网站名称
+subtitle: '' #副标题
+description: '笑·是人类的特权' #个性签名
+keywords: #关键词
+author: Smile #作者
+language: zh-CN #语言 default(en)/  zh-CN（简体）/ zh-TW（繁体）
+timezone: Asia/Shanghai #时区
 
-# URL
+# URL 默认是http://example.com 如果使用的是github pages 请设置成 https://xxx.github.io
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
-permalink: :year/:month/:day/:title/
-permalink_defaults:
+url: https://xuan258.github.io
+permalink: :title/ #永久链接
+permalink_defaults: #默认永久链接
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
   trailing_html: true # Set to false to remove trailing '.html' from permalinks
