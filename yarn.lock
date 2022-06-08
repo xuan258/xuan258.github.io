@@ -129,6 +129,11 @@
   "resolved" "https://registry.npmjs.org/acorn/-/acorn-4.0.13.tgz"
   "version" "4.0.13"
 
+"add@^2.0.6":
+  "integrity" "sha512-j5QzrmsokwWWp6kUcJQySpbG+xfOBqqKnup3OIk1pz+kB/80SLorZ9V8zHFLO92Lcd+hbvq8bT+zOGoPkmBV0Q=="
+  "resolved" "https://registry.npmjs.org/add/-/add-2.0.6.tgz"
+  "version" "2.0.6"
+
 "agent-base@6":
   "integrity" "sha512-RZNwNclF7+MS/8bDg70amg32dyeZGZxiDuQmZxKLAlQjr3jGyLx+4Kkk58UO7D2QdgFIQCovuSuZESne6RG6XQ=="
   "resolved" "https://registry.npmjs.org/agent-base/-/agent-base-6.0.2.tgz"
@@ -284,7 +289,7 @@
   "resolved" "https://registry.npmjs.org/binary-extensions/-/binary-extensions-2.2.0.tgz"
   "version" "2.2.0"
 
-"bluebird@^3.2.2", "bluebird@^3.5.1", "bluebird@^3.5.2", "bluebird@^3.5.5", "bluebird@^3.7.2":
+"bluebird@^3.2.2", "bluebird@^3.5.0", "bluebird@^3.5.1", "bluebird@^3.5.2", "bluebird@^3.5.5", "bluebird@^3.7.2":
   "integrity" "sha512-XpNj6GDQzdfW+r2Wnn7xiSAd7TM3jzkxGXBGTtWKuSXv1xUV+azxAm8jdWZN06QTQk+2N2XB9jRDkvbmQmcRtg=="
   "resolved" "https://registry.npmjs.org/bluebird/-/bluebird-3.7.2.tgz"
   "version" "3.7.2"
@@ -1179,6 +1184,18 @@
     "resolve" "^1.11.0"
     "tildify" "^2.0.0"
 
+"hexo-deployer-git@^3.0.0":
+  "integrity" "sha512-U2Xewjab+rvUDNTcuYYnOxitkDXL3f5VMUH32jKDHs3OC4YFVGRoEaTTDVHskqr3KRi78Wohjc6BSRHOoG3oxA=="
+  "resolved" "https://registry.npmjs.org/hexo-deployer-git/-/hexo-deployer-git-3.0.0.tgz"
+  "version" "3.0.0"
+  dependencies:
+    "bluebird" "^3.5.0"
+    "chalk" "^4.0.0"
+    "hexo-fs" "^3.0.1"
+    "hexo-util" "^2.1.0"
+    "moment" "^2.18.0"
+    "nunjucks" "^3.2.1"
+
 "hexo-front-matter@^3.0.0":
   "integrity" "sha512-hSQTPUmB/BCe1BFYmXRkPyLk8rqbBqHCQq+rjwwOJuEfOADrFaVK2VPZb90tJzPyXE1xSxpgCxE/AZq0CyTVwg=="
   "resolved" "https://registry.npmjs.org/hexo-front-matter/-/hexo-front-matter-3.0.0.tgz"
@@ -1333,6 +1350,11 @@
     "htmlparser2" "^7.0.0"
     "prismjs" "^1.17.1"
     "strip-indent" "^3.0.0"
+
+"hexo-wordcount@^6.0.1":
+  "integrity" "sha512-tbo2P9xRWEKQmRf7+XuPjx9It1MnaE26nA+EEb2DN39gK1x+26W7Nm4Iyp4AugQjBWYYDx7OLn4gp1WFxQpQew=="
+  "resolved" "https://registry.npmjs.org/hexo-wordcount/-/hexo-wordcount-6.0.1.tgz"
+  "version" "6.0.1"
 
 "hexo@^6.2.0":
   "integrity" "sha512-HOpt3vUOz/T0rWTDb/CtWuBJwYARPwbpvGwsaz0RPu/l5I6AmKE+UA0lJZf14iPS3JIt/HiOcTZ3Qz22A+PE8w=="
@@ -1843,7 +1865,7 @@
   dependencies:
     "moment" ">= 2.9.0"
 
-"moment@^2.29.1", "moment@>= 2.9.0":
+"moment@^2.18.0", "moment@^2.29.1", "moment@>= 2.9.0":
   "integrity" "sha512-c6YRvhEo//6T2Jz/vVtYzqBzwvPT95JBQ+smCytzf7c50oMZRsR/a4w88aD34I+/QVSfnoAnSBFPJHItlOMJVw=="
   "resolved" "https://registry.npmjs.org/moment/-/moment-2.29.3.tgz"
   "version" "2.29.3"
@@ -1902,7 +1924,7 @@
   "resolved" "https://registry.npmjs.org/normalize-path/-/normalize-path-3.0.0.tgz"
   "version" "3.0.0"
 
-"nunjucks@^3.0.0", "nunjucks@^3.1.6", "nunjucks@^3.2.3":
+"nunjucks@^3.0.0", "nunjucks@^3.1.6", "nunjucks@^3.2.1", "nunjucks@^3.2.3":
   "integrity" "sha512-psb6xjLj47+fE76JdZwskvwG4MYsQKXUtMsPh6U0YMvmyjRtKRFcxnlXGWglNybtNTNVmGdp94K62/+NjF5FDQ=="
   "resolved" "https://registry.npmjs.org/nunjucks/-/nunjucks-3.2.3.tgz"
   "version" "3.2.3"
