@@ -28,7 +28,7 @@ archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
-skip_render:
+skip_render: #部署的时候不包含的文件
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -45,8 +45,8 @@ relative_link: false
 future: true
 highlight:
   enable: true
-  line_number: true
-  auto_detect: false
+  line_number: false
+  auto_detect: true #自动判断代码语言
   tab_replace: ''
   wrap: true
   hljs: false
@@ -94,7 +94,33 @@ include:
 exclude:
 ignore:
 
-# Extensions
+#归档页的分页设置
+archive_generator: #归档页的配置
+  per_page: 30 #归档页每页博客数
+  yearly: true #按年归档
+  monthly: true #按月归档
+  
+  #标签页的分页设置
+tag_generator:
+  per_page: 20 #标签页每页博客数
+
+
+  # 设置博客单词统计
+symbols_count_time:
+  symbols: true  # 文章字数统计
+  time: true  # 文章阅读时间统计
+  total_symbols: true  # 站点总字数统计
+  total_time: true # 站点总阅读时间统计
+  exclude_codeblock: false
+
+# 搜索
+search:
+    path: search.xml
+    field: post
+    format: html
+    limit: 10000
+
+# Extensions 主题相关
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: butterfly
@@ -105,3 +131,27 @@ deploy:
   type: git
   repo: git@github.com:xuan258/xuan258.github.io.git
   branch: main
+
+# 音频播放器相关
+aplayer:
+  meting: true
+  asset_inject: false
+
+# 看板娘相关配置
+live2d:
+  enable: true
+  scriptFrom: local # 默认
+  pluginRootPath: live2dw/ # 插件在站点上的根目录(相对路径)
+  pluginJsPath: lib/ # 脚本文件相对与插件根目录路径
+  pluginModelPath: assets/ # 模型文件相对与插件根目录路径
+  tagMode: false # 标签模式, 是否仅替换 live2d tag标签而非插入到所有页面中
+  debug: false # 调试, 是否在控制台输出日志
+  model:
+    use: live2d-widget-model-tororo # npm-module package name
+    
+# Algolia 搜索功能配置
+algolia:
+  appId: 'MY0L9JC4NK'
+  apiKey: 'e5dd1288ea8d33ac5e46ef2a11c0ce56'
+  adminApiKey: '0f00af9c6896a88c57483628ada52fc3'
+  indexName: 'hexo_search'
