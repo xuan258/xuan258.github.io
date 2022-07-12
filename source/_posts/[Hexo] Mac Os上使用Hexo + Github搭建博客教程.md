@@ -123,11 +123,15 @@ Tips：重新生成项目和本地启动项目可以合并：<code>hexo g & hexo
 
 ![重新生成项目图片](https://sunny-blog.oss-cn-beijing.aliyuncs.com/20220509/20220509_13.png)
 
+{% note simple %}
 到这里，我们的主题修改就完成了，后期我们可以根据自己的需要去修改butterfly的配置文件，让我们的博客网站更加个性化。
 
 下一篇文章我将说说如何修改主题让我们的博客网站更具个性化。
 
 关于Hexo搭建博客到这里就讲得差不多了，下面我们就想怎么把博客部署到Github上。
+{% endnote %}
+
+---------
 
 # 部署博客到Github
 
@@ -135,10 +139,13 @@ Tips：重新生成项目和本地启动项目可以合并：<code>hexo g & hexo
 
 ### 创建仓库
 
+{% note default simple %}
 在Github里创建一个存放博客项目的仓库，操作如下
+{% endnote %}
 
 ![存放博客项目的仓库](img/warehouse-name.png)
 
+{% note info simple %}
 这里有两个注意点：
 
 1. 仓库的名称必须与你Github账号名相同
@@ -147,12 +154,15 @@ Tips：重新生成项目和本地启动项目可以合并：<code>hexo g & hexo
 比如你Github账号名叫：<code>xiaoxunbao</code>，那你新建的这个仓库名就叫：<code>xiaoxunbaoi.github.io</code>
 
 创建之后，我们就有了一个存放博客项目仓库：
+{% endnote %}
 
 ![存放博客项目仓库](https://sunny-blog.oss-cn-beijing.aliyuncs.com/20220509/20220509_16.png)
 
 ### 安装Hexo部署插件
 
+{% note default simple %}
 进入到Blogs目录下，安装部署插件：
+{% endnote %}
 
 <figure class="highlight bash"><table><tbody style="display:block;overflow:auto;border:none"><tr><td class="code"><pre><span class="line">cnpm install --save hexo-deployer-git</span><br></pre></td></tr></tbody></table></figure>
 
@@ -160,7 +170,9 @@ Tips：重新生成项目和本地启动项目可以合并：<code>hexo g & hexo
 
 ###修改项目配置文件
 
+{% note success simple %}
 好了，万事俱备，只欠修改_config.yml文件了，打开_config.yml文件，拖拽到最后，修改文件：
+{% endnote %}
 
 ![原配置文件图片](https://sunny-blog.oss-cn-beijing.aliyuncs.com/20220509/20220509_18.png)
 
@@ -168,8 +180,9 @@ Tips：重新生成项目和本地启动项目可以合并：<code>hexo g & hexo
 
 ![修改后配置文件图片](/img/github-config.png)
 
+{% note info simple %}
 注意：repo为你刚创建的Github项目的地址，如果你是使用的vim打开的_config.yml，记得修改了要:wq保存退出
-
+{% endnote %}
 ### 重新生成项目
 
 清理项目缓存：
@@ -184,8 +197,9 @@ Tips：重新生成项目和本地启动项目可以合并：<code>hexo g & hexo
 
 <figure class="highlight bash"><table><tbody style="display:block;overflow:auto;border:none"><tr><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></tbody></table></figure>
 
+{% note info simple %}
 注意：这里每次使用hexo d部署到Github为了安全都要求输入账号密码，如果你不希望每次都输入账号密码，可以跟博主一样设置Github的SSH Keys，以后每次发布到Github就不需要输入账号密码了。
-
+{% endnote %}
 
 
 
