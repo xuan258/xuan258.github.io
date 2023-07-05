@@ -200,7 +200,31 @@ Tips：重新生成项目和本地启动项目可以合并：<code>hexo g & hexo
 {% note info simple %}
 注意：这里每次使用hexo d部署到Github为了安全都要求输入账号密码，如果你不希望每次都输入账号密码，可以跟博主一样设置Github的SSH Keys，以后每次发布到Github就不需要输入账号密码了。
 {% endnote %}
+### 为什么要备份---到Github
 
+在<code>这篇文章</code>中我们把<code>Hexo</code>和<code>Cithub</code>结合起来搭建了自己的个人博客，<code>hexo d</code>部署到<code>Cithub</code>的其实<code>Hexo</code>编译后的文件，这些文件是用来生成网页的，并不包含我们的源文
+它其实上传到<code>Github</code>的是在我们本地目录里的<code>.deploy_git</code>里面的内容
+我们的源文件比如相关<code>source</code>文件、配置文件等都是没有上传到<code>Github</code>上的，所以我们要利用<code>git</code>来做分支管理，对我们的源文件进行备份，这样我们就可以在另一台电脑上把源文件<code>clone</code>到本地安装相应的环境就可以继续写我们的博客了。
+### 克隆Hexo分支
+在本地把我们刚建的分支<code>Hexo</code>克隆到本地
+把克隆下来的项目里面的<code>.git</code>文件复制到我们的Hexo博客目录下
+{% note info simple %}
+注意：如果之前搭建博客的时候自己更换过主题文件的，请把主题文件里面的<code>.git</code>文件删除。
+{% endnote %}
+### 开始备份
+进入到Blogs根目录下，执行如下命令：
+<figure class="highlight bash"><table><tbody style="display:block;overflow:auto;border:none"><tr><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m "Blog源文件备份"</span><br><span class="line">git push origin hexo</span><br></pre></td></tr></tbody></table></figure>
+这时候我们会看到<code>Cithub</code>上的<code>Hexo</code>分支就有我们的源文件了。
+如果你想要每次更改东西都希望备份到<code>Hexo</code>分支上，可以执行如下步骤：
+<figure class="highlight bash"><table><tbody style="display:block;overflow:auto;border:none"><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">git add .</span><br><span class="line">git commit -m "备份"</span><br><span class="line">git push</span><br><span class="line">hexo g & hexo d</span><br></pre></td></tr></tbody></table></figure>
+
+### 如何恢复博客
+假如我们现在更换了电脑，希望在新的电脑上继续写博客，把<code>Cithub</code>上<code>hexo</code>分支上的项目克隆到本地（注意：是我们备份的那个分支）
+
+进入到克隆下来的文件夹，执行如下命令：
+<figure class="highlight bash"><table><tbody style="display:block;overflow:auto;border:none"><tr><td class="code"><pre><span class="line">npm install hexo-cli</span><br><span class="line">npm install hexo-deployer-git</span><br><span class="line">git push origin hexo</span><br></pre></td></tr></tbody></table></figure>
+然后再去安装主题相关的插件即可，当然如果你电脑上还没有<code>Node.js</code>等环境的话可能还需要去安装相关环境。
+好了，现在我们就基本上可以在另一台电脑上继续我们的博客之旅啦～
 
 
 
